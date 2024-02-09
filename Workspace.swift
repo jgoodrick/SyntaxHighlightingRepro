@@ -2,9 +2,9 @@
 import ProjectDescription
 
 let workspace = Workspace(
-    name: "Deliverables",
+    name: "Workspace",
     projects: [
-        "Projects/Deliverables/Athlete/Kit/Example",
-        "Projects/Deliverables/Athlete/Kit/Framework",
+        "Projects/Example",
+        "Projects/Framework",
     ]
 )

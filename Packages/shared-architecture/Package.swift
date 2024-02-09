@@ -148,12 +148,7 @@ extension PackageTarget {
 
     // What modules become available for use outside of this package?
     var library: Product? {
-        switch self {
-        case .Architecture:
-            Product.library(name: libraryName, targets: [targetName])
-        case .AsyncSubjects:
-            nil
-        }
+        Product.library(name: libraryName, targets: [targetName])
     }
     
     var target: Target {

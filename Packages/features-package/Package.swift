@@ -4,7 +4,7 @@ import PackageDescription
 import _StringProcessing
 
 let package = Package(
-    name: "athlete-kit-features",
+    name: "features-package",
     platforms: [
         .iOS(.v16),
         .macOS(.v14),
@@ -15,24 +15,21 @@ let package = Package(
 )
 
 enum PackageTarget: String, CaseIterable {
-    case AthleteKitFeatures
+    case ExamplePackageProduct
 }
 
 enum ExternalPackage: String, CaseIterable {
     case SharedArchitecture = "shared-architecture"
-    case SharedCore = "shared-core"
-    case SharedDependencies = "shared-dependencies"
 }
 
 enum ExternalTarget: String, CaseIterable {
     case Architecture
-    case TaggedValues
 }
 
 extension PackageTarget {
     var internalDependencies: [PackageTarget] {
         switch self {
-        case .AthleteKitFeatures:
+        case .ExamplePackageProduct:
             return [
             ]
         }
@@ -40,9 +37,9 @@ extension PackageTarget {
     
     var externalDependencies: [ExternalTarget] {
         switch self {
-        case .AthleteKitFeatures:
+        case .ExamplePackageProduct:
             return [
-                .TaggedValues,
+                .Architecture,
             ]
         }
     }
@@ -53,8 +50,6 @@ extension ExternalTarget {
         switch self {
         case .Architecture:
             return .SharedArchitecture
-        case .TaggedValues:
-            return .SharedCore
         }
     }
 }

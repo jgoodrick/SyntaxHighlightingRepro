@@ -6,7 +6,7 @@ import PackageDescription
     import ProjectDescriptionHelpers
 
     let packageSettings = PackageSettings(
-        baseSettings: .targetSettings,
+        baseSettings: .settings(),
         platforms: [.iOS]
     )
 
@@ -15,9 +15,7 @@ import PackageDescription
 let package = Package(
     name: "external-workspace-dependencies",
     dependencies: [
-        "athlete-kit-features",
-        "shared-architecture",
-        "shared-core",
-        "shared-dependencies",
-    ].map({ .package(path: "Packages/\($0)") })
+        .package(path: "Packages/shared-architecture"),
+        .package(path: "Packages/features-package"),
+    ]
 )

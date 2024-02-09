@@ -1,5 +1,5 @@
 
-import AthleteKitFrameworkiOS
+import ExampleFrameworkTarget
 import SwiftUI
 
 @main
