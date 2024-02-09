@@ -1,0 +1,7 @@
+# this is where we will specify the repository's version of tuist to use, 
+# once version 4 is officially released. For now, we will just prepend it 
+# onto the PATH in our .zshrc file
+
+# [tools]
+# tuist = "latest"
+
