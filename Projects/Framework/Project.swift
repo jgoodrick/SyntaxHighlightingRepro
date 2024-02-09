@@ -15,20 +15,9 @@ let project = Project(
             deploymentTargets: .iOS("16.0"),
             sources: ["Sources/**"],
             dependencies: [
-                .external(name: "ExamplePackageProduct", condition: .none),
+                .external(name: "ComposableArchitecture", condition: .none),
             ],
             settings: .settings()
         ),
-    ],
-    schemes: [
-        .scheme(
-            name: "Example Framework Target Scheme",
-            shared: true,
-            buildAction: .buildAction(
-                targets: [
-                    "Example Framework Target",
-                ]
-            )
-        )
     ]
 )

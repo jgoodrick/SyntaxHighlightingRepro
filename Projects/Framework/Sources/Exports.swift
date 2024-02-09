@@ -1,6 +1,5 @@
 
-//@_exported import AthleteKitFeatures
-import Architecture
+import ComposableArchitecture
 
 @Reducer
 struct Thing: Reducer {
